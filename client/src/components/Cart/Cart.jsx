@@ -9,8 +9,8 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
-  console.log("Products Array:", products);
-  console.log("First product img:", products[0]?.img?.url);
+  // console.log("Products Array:", products);
+  // console.log("First product img:", products[0]?.img?.url);
 
   const dispatch = useDispatch();
 

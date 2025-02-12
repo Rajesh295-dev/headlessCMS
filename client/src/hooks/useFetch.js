@@ -13,12 +13,8 @@ const useFetch = (url) => {
 
       try {
         //console.log("Fetching data from:", url);
-
-
-
         const res = await makeRequest.get(url);
-
-        console.log("🔍 Fetching:", url);
+        // console.log("🔍 Fetching:", url);
         // console.log("🔍 Full API Response:", JSON.stringify(res.data, null, 2));
 
         // console.log("Hook Response Data:", res.data);
@@ -26,7 +22,7 @@ const useFetch = (url) => {
         setData(res.data?.data || []); // Ensure data is always an array
 
       } catch (err) {
-        console.error("❌ Error fetching data:", err);
+        //console.error("❌ Error fetching data:", err);
         setError(err.message || "Something went wrong");
       } finally {
         setLoading(false);

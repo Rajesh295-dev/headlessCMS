@@ -15,7 +15,7 @@ const Product = () => {
   const dispatch = useDispatch();
 
   const { documentId } = useParams(); // Extract documentId from URL params
-  console.log("Product document ID:", documentId); // Debugging
+  //console.log("Product document ID:", documentId); // Debugging
 
   // Prevent API call if documentId is missing
   if (!documentId) {
@@ -29,7 +29,7 @@ const Product = () => {
       : null
   );
 
-  console.log("Fetched Product Data:", data);
+  //console.log("Fetched Product Data:", data);
 
   if (loading) return <div className="product">Loading...</div>;
   if (error)

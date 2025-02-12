@@ -473,7 +473,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
     description: 'Organize your content into categories';
-    displayName: 'Category';
+    displayName: 'category';
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -541,7 +541,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
   collectionName: 'orders';
   info: {
     description: '';
-    displayName: 'Order';
+    displayName: 'order';
     pluralName: 'orders';
     singularName: 'order';
   };

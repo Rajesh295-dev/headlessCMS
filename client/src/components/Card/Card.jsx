@@ -1,18 +1,5 @@
 import React from "react";
 import "./Card.scss";
-// import { Link } from "react-router-dom";
-// import { useEffect } from "react";
-// const Card = ({ item }) => {
-//   useEffect(() => {
-//     console.log("Item passed to Card:", item);
-//   }, [item]);
-
-//   return (
-//     <div className="card">
-//       <pre>{JSON.stringify(item, null, 2)}</pre>
-//     </div>
-//   );
-// };
 
 import { Link } from "react-router-dom";
 
@@ -24,7 +11,7 @@ const Card = ({ item }) => {
 
   // Destructuring the properties directly (since there is no `attributes` field)
   const { documentId, title, price, isNew, img, img2 } = item;
-  console.log("this is d documentId", documentId);
+  //console.log("this is d documentId", documentId);
 
   // Extract image URLs (Cloudinary URLs are already fully qualified)
   const mainImgUrl = img?.url || img?.formats?.thumbnail?.url || null;
