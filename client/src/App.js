@@ -27,11 +27,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/products/:documentId",
+        path: "/products/:id",
         element: <Products />,
       },
       {
-        path: "/product/:documentId",
+        path: "/product/:documentId", // for single it must pass the documentId instead id
         element: <Product />,
       },
     ],
