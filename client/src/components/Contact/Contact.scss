@@ -1,33 +1,84 @@
-.contact{
+.contact {
   background-color: #2879fe;
   color: white;
   padding: 15px;
   display: flex;
   justify-content: center;
 
-  .wrapper{
+  .wrapper {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px; /* Added a gap for better spacing */
 
-    input{
+    input {
       padding: 10px;
       border: none;
-      border-radius: 5px 0 0  5px;
+      border-radius: 5px 0 0 5px;
+      width: 100%;
+      max-width: 250px; /* Limits width on larger screens */
     }
 
-    button{
+    button {
       padding: 10px;
       color: white;
       background: #333;
       border-radius: 0 5px 5px 0;
       border: none;
+      cursor: pointer;
     }
 
-    .icons{
+    .icons {
       display: flex;
       gap: 10px;
     }
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .contact .wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .wrapper {
+    width: 90%;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .contact .wrapper input {
+    border-radius: 5px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact .wrapper button {
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .contact .wrapper .icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .contact .wrapper {
+    width: 100%;
+  }
+
+  .contact .wrapper input,
+  .contact .wrapper button {
+    padding: 12px;
   }
 }
