@@ -1,0 +1,5 @@
+[build]
+command = "cd api && yarn install && yarn build"
+
+[start]
+command = "cd api && yarn start"
