@@ -7,7 +7,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000'], // Add your frontend URL here
+      origin: ['https://headless-cms-six-weld.vercel.app'], // Add your frontend URL here
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], // Allow specific HTTP methods
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'], // Allow specific headers
     },
