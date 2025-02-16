@@ -1,38 +1,133 @@
+// .products {
+//   padding: 30px 50px;
+//   display: flex;
+
+//   .left {
+//     flex: 1;
+//     position: sticky;
+//     height: 100%;
+//     top: 50px;
+
+//     .filterItem{
+//       margin-bottom: 30px;
+
+//       h2{
+//         font-weight: 400;
+//         margin-bottom: 20px;
+//       }
+
+//       .inputItem{
+//         margin-bottom: 10px;
+//         label{
+//           margin-left: 10px;
+//         }
+//       }
+//     }
+//   }
+
+//   .right {
+//     flex: 3;
+
+//     .catImg{
+//       width: 100%;
+//       height: 300px;
+//       object-fit: cover;
+//       margin-bottom: 50px;
+//     }
+//   }
+// }
+
 .products {
   padding: 30px 50px;
   display: flex;
+  gap: 20px;
 
   .left {
     flex: 1;
     position: sticky;
     height: 100%;
     top: 50px;
+    max-width: 250px; /* Limits width on larger screens */
 
-    .filterItem{
+    .filterItem {
       margin-bottom: 30px;
 
-      h2{
+      h2 {
         font-weight: 400;
         margin-bottom: 20px;
+        font-size: 18px;
       }
 
-      .inputItem{
+      .inputItem {
         margin-bottom: 10px;
-        label{
+
+        label {
           margin-left: 10px;
         }
       }
     }
   }
-  
+
   .right {
     flex: 3;
 
-    .catImg{
+    .catImg {
       width: 100%;
       height: 300px;
       object-fit: cover;
       margin-bottom: 50px;
     }
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .products {
+    padding: 20px 30px;
+    gap: 15px;
+  }
+
+  .products .left {
+    max-width: 200px;
+  }
+
+  .products .right .catImg {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .products .left {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .products .left .filterItem {
+    margin-bottom: 20px;
+  }
+
+  .products .right .catImg {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    padding: 10px;
+  }
+
+  .products .left {
+    display: none; /* Hides the filter section for small screens */
+  }
+
+  .products .right .catImg {
+    height: 180px;
   }
 }
