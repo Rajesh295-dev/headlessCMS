@@ -7,6 +7,10 @@
   padding: 20px;
   -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 5px;
 
   h1 {
     margin-bottom: 30px;
@@ -20,10 +24,12 @@
     align-items: center;
     gap: 20px;
     margin-bottom: 30px;
+
     img {
       width: 80px;
       height: 100px;
       object-fit: cover;
+      border-radius: 5px;
     }
 
     .details {
@@ -59,7 +65,7 @@
   }
 
   button {
-    width: 250px;
+    width: 100%;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -71,11 +77,118 @@
     color: white;
     font-weight: 500;
     margin-bottom: 20px;
+    border-radius: 5px;
   }
 
-  .reset{
-    color:red;
+  .reset {
+    color: red;
     font-size: 12px;
     cursor: pointer;
+    text-align: center;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .cart {
+    right: 10px;
+    width: 300px;
+  }
+
+  .cart .item {
+    gap: 15px;
+  }
+
+  .cart .item img {
+    width: 70px;
+    height: 90px;
+  }
+
+  .cart h1 {
+    font-size: 22px;
+  }
+
+  .cart .total {
+    font-size: 16px;
+  }
+
+  .cart button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    right: 5px;
+    width: 280px;
+    top: 70px;
+    padding: 15px;
+  }
+
+  .cart h1 {
+    font-size: 20px;
+  }
+
+  .cart .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart .total {
+    font-size: 14px;
+  }
+
+  .cart button {
+    font-size: 14px;
+  }
+
+  .cart .reset {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart {
+    right: 0;
+    left: 0;
+    width: 100%;
+
+    max-height: 750px;
+    overflow-y: scroll;
+    top: 60px;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .cart h1 {
+    font-size: 18px;
+  }
+
+  .cart .item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .cart .item .details h1 {
+    font-size: 16px;
+  }
+
+  .cart .total {
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .cart button {
+    font-size: 12px;
+    width: 90%;
+  }
+
+  .cart .reset {
+    font-size: 10px;
   }
 }
